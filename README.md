@@ -10,8 +10,9 @@ Prefix by default: `sm!`
 ### Basics
 - `help` Gives you the help you need!
 - `init` The command to get started
-- `del` Delete your account from the database (__Warning: Your account will be instantly wiped out from the database without any confirmation!__)
-- `prefix <prefix>` Change my prefix to the choosen one!
+- `del` Delete your account from the database <br />
+(__Warning: Your account will be instantly wiped out from the database without any confirmation!__)
+- `prefix <prefix>` Change my prefix to the choosen one! <br />
 *Note: Mention me with `prefix` to know my prefix! (@Stock Market prefix)*
 - `ping` To see the latency between you, the bot and the API
 - `about` About the bot
@@ -21,14 +22,17 @@ Prefix by default: `sm!`
 - `list` / `list @User` Your / user's current trades
 - `daily` To get your daily reward
 - `vote` Vote for the bot and get a reward
+- `leaderboard` Who is the richest in your server?
 
 ### Stock Market
 - `search` To search for stock markets
-- `show <symbol>` To get details about a particular market (ex: *sm!show AAPL*)
-- `newtrade <buy/sell> <symbol> <price>` To trade stocks on the market(ex: *sm!newtrade buy AAPL 5000*)
-- ==>`buy` if you think the stock will go up,
-- ==>`sell` if you think the stock will go down.
-- `closetrade <ID>` (ex: *sm!closetrade 0*) Close a trade (the ID can be found with the list command). Give to you the final value of your trade.
+- `show <symbol>` To get details about a particular market (ex: `sm!show AAPL`)
+- `newtrade <buy/sell> <symbol> <price> <optional: share/s>` To trade stocks on the market(ex: `sm!newtrade buy AAPL 5000`) <br />
+&nbsp; ==>`buy` if you think the stock will go up, <br />
+&nbsp; ==>`sell` if you think the stock will go down. <br />
+Adding "s" or "share" at the end of the command will specify an amount of shares to buy/sell  <br />
+(ex: `sm!newtrade buy BTCUSD 1 s` will buy the value of 1 Bitcoin) <br />
+- `closetrade <ID>` (ex: *sm!closetrade 0*) Close a trade (the ID can be found with the list command). Give to you the worth of your trade.
 
 ### Available aliases
 Type `help <command>`
