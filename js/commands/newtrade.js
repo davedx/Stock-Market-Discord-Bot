@@ -53,7 +53,9 @@ exports.run = async (client, msg, args) => {
 		const infoPrice = await determinePriceToPay(splited[2], byShare, resp[0]);
 		const amount = infoPrice[0];
 		const edited = infoPrice[1];
-		if (!status || !amount || amount < 0) {
+		if (edited === 'limited' || edited === 'delayed') {
+			msgBot.edit(tool.createEmbedMessage(msg, 'FF0000', 'Sorry, trading out of hours is currently disabled. Please try once markets are open'));
+		} else if (!status || !amount || amount < 0) {
 			msgBot.edit(tool.createEmbedMessage(msg, 'FF0000', 'Syntax error! Please try again. sm!newtrade <buy/sell> <symbol> <amount> <optional: share/s>'));
 		} else {
 			let money = await mysql.getUserData(msg.author.id, 'money');
